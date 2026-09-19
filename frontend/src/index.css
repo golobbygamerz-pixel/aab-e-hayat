@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f2eee7;
+  color: #171b19;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+header {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 5%;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.logo > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo small {
+  font-size: 7px;
+  letter-spacing: 0.28em;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+nav a {
+  opacity: 0.88;
+}
+
+.navbook {
+  border: 1px solid #ffffff66;
+  padding: 13px 18px;
+}
+
+.menu {
+  display: none;
+  background: none;
+  color: white;
+}
+
+.hero {
+  min-height: 860px;
+  position: relative;
+  background: url("/images/hero.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  padding: 150px 7% 180px;
+  color: white;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #07100ddd,
+    #07100d55 60%,
+    #07100d88
+  );
+}
+
+.heroText {
+  position: relative;
+  max-width: 720px;
+}
+
+.heroText p,
+.pageHead p,
+.intro > p,
+.roomsSec p,
+.bookingPage > div > p,
+.detailInfo > p,
+.about p {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  margin: 0 0 20px;
+}
+
+.heroText h1,
+.pageHead h1 {
+  font: 500 clamp(52px, 7vw, 92px) / 0.96
+    "Playfair Display";
+  margin: 0 0 25px;
+  letter-spacing: -0.035em;
+}
+
+.heroText h1 i,
+.pageHead h1 i,
+h2 i {
+  font-style: italic;
+}
+
+.heroText span,
+.pageHead span {
+  max-width: 480px;
+  display: block;
+  color: #ffffffb8;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.heroBtns button,
+.sectionTop button {
+  padding: 15px 20px;
+  background: #fff;
+  color: #101513;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.heroBtns .ghost {
+  background: #ffffff12;
+  color: #fff;
+  border: 1px solid #ffffff55;
+}
+
+.heroCount {
+  position: absolute;
+  right: 6%;
+  bottom: 230px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+.heroCount span {
+  opacity: 0.4;
+}
+
+.booking {
+  position: absolute;
+  z-index: 5;
+  bottom: 45px;
+  left: 7%;
+  right: 7%;
+  background: #f8f5ef;
+  color: #171b19;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr 1.3fr;
+  box-shadow: 0 18px 50px #0003;
+}
+
+.booking > div {
+  padding: 10px 22px;
+  border-right: 1px solid #171b1920;
+}
+
+.booking label {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+  opacity: 0.55;
+}
+
+.booking input,
+.booking select {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  font-size: 13px;
+}
+
+.booking > button,
+.primary {
+  background: #173c32;
+  color: #fff;
+  padding: 18px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.intro {
+  text-align: center;
+  padding: 125px 20px 70px;
+}
+
+.intro h2,
+.sectionTop h2 {
+  font: 500 clamp(42px, 5vw, 65px) / 1
+    "Playfair Display";
+  margin: 0 0 22px;
+}
+
+.muted {
+  max-width: 500px;
+  margin: auto;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.amenities {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #171b1920;
+  border-bottom: 1px solid #171b1920;
+  margin: 0 7%;
+}
+
+.amenities div {
+  padding: 27px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  border-right: 1px solid #171b1920;
+}
+
+.amenities div:last-child {
+  border: 0;
+}
+
+.amenities b {
+  font-size: 9px;
+  opacity: 0.4;
+}
+
+.amenities span {
+  font-size: 11px;
+}
+
+.roomsSec,
+.roomsPage {
+  padding: 110px 7%;
+}
+
+.sectionTop {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.sectionTop button {
+  border: 1px solid #171b1930;
+  background: transparent;
+}
+
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.roomCard {
+  background: #e8e2d9;
+  overflow: hidden;
+}
+
+.roomCard img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.roomCard > div {
+  padding: 25px;
+}
+
+.roomCard p {
+  font: 500 25px "Playfair Display";
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+
+.roomCard h3 {
+  font-size: 14px;
+  margin: 0 0 13px;
+}
+
+.roomCard h3 small {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.roomCard span {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.roomCard a {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  border-bottom: 1px solid #171b19;
+  padding-bottom: 5px;
+}
+
+.pageHead {
+  padding: 170px 7% 90px;
+  background: #14241f;
+  color: #fff;
+}
+
+.roomsPage {
+  padding-top: 50px;
+}
+
+.roomsPage .booking {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-bottom: 55px;
+  box-shadow: none;
+}
+
+.detail {
+  padding: 140px 7% 100px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.detail > img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.detailInfo h1 {
+  font: 500 56px "Playfair Display";
+  margin: 0 0 15px;
+}
+
+.detailInfo h2 {
+  font-size: 18px;
+}
+
+.detailInfo h2 small {
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.detailInfo > span {
+  display: block;
+  color: #666;
+  line-height: 1.7;
+  margin: 20px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.features div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.primary {
+  display: inline-block;
+}
+
+.bookingPage {
+  padding: 160px 7% 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.bookingPage h1 {
+  font: 500 58px "Playfair Display";
+  margin: 0;
+}
+
+.bookingPage form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bookingPage input,
+.bookingPage select {
+  padding: 17px;
+  border: 1px solid #171b1930;
+  background: #fff;
+  outline: 0;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.success {
+  padding: 15px;
+  background: #dcebe4;
+  color: #173c32;
+  font-size: 12px;
+}
+
+.gallery {
+  padding: 0 7% 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.gallery img:nth-child(1) {
+  grid-column: span 2;
+  height: 500px;
+}
+
+.about {
+  padding: 50px 7% 120px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+}
+
+.about h2 {
+  font: 500 50px "Playfair Display";
+  margin: 0 0 20px;
+}
+
+.about span {
+  color: #666;
+  line-height: 1.8;
+}
+
+footer {
+  background: #101916;
+  color: #fff;
+  padding: 70px 7%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+footer p,
+footer a,
+footer span {
+  font-size: 11px;
+  color: #ffffff99;
+  display: block;
+  margin: 0 0 12px;
+}
+
+footer .logo {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 22px 5%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 5%;
+    right: 5%;
+    padding: 25px;
+    background: #101916;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 850px;
+    padding: 130px 6% 220px;
+  }
+
+  .heroText h1 {
+    font-size: 53px;
+  }
+
+  .booking {
+    left: 6%;
+    right: 6%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .booking > button {
+    grid-column: span 2;
+  }
+
+  .amenities {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .amenities div:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .roomGrid,
+  .detail,
+  .bookingPage,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .roomsSec,
+  .roomsPage {
+    padding: 75px 6%;
+  }
+
+  .sectionTop {
+    align-items: start;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .roomCard img {
+    height: 280px;
+  }
+
+  .pageHead {
+    padding: 140px 6% 70px;
+  }
+
+  .detail {
+    padding: 120px 6% 70px;
+    gap: 35px;
+  }
+
+  .detail > img {
+    height: 420px;
+  }
+
+  .bookingPage {
+    padding: 130px 6% 70px;
+    gap: 50px;
+  }
+
+  .gallery {
+    padding: 0 6% 70px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery img,
+  .gallery img:nth-child(1) {
+    height: 260px;
+    grid-column: auto;
+  }
+
+  .about {
+    padding: 30px 6% 80px;
+  }
+
+  .about img {
+    height: 400px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+  }
+}
